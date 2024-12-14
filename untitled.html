@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry Mom</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #ff99cc, #ffccff);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        
+        h1 {
+            font-size: 3em;
+            color: #d6336c;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Parallax Background */
+        .parallax {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1604072501379-6d39c02770f5'); /* Replace with your cat image */
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+            z-index: -1;
+            animation: parallaxEffect 10s linear infinite;
+        }
+
+        /* Animations for smooth effects */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes parallaxEffect {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(30px); }
+        }
+
+        img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 15px;
+            border: 5px solid #ffffff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        /* Hover effect for image */
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Container and Message Box */
+        .container {
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+
+        .message {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 70%;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeInMessage 2.5s ease-out 1s forwards;
+        }
+
+        @keyframes fadeInMessage {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .message p {
+            font-size: 1.2em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax"></div> <!-- Parallax Background -->
+    <div class="container">
+        <h1>Sorry Mom!</h1>
+        <div class="message">
+            <p>I'm really sorry for all the trouble I've caused. I hope this cute cat can make things better!</p>
+        </div>
+        <img src="cat-sorry.jpg" alt="from your Cutie">
+    </div>
+</body>
+</html>
